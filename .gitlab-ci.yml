@@ -8,7 +8,7 @@ source:
   tags:
     - k8s
   script:
-    -  java -jar /opt/seczone/scanner.jar --filePath /builds/lixiaofang/Weixin Java Tools --parseFrom 4 --cliMode portal --projectName lixaiofang --phase Phase_1 --onCache true --mergeMode FULL --retrunCheckReport true --token c291cmNlLWFwaUBzZWN6b25lLmNuOmNmYTcxYTUyNjFjZTQ3NmM5MGNhNDRjNmIyNGNiNGM3  --portalIp https://sca.gitsec.cn/
+    -  java -jar /opt/seczone/scanner.jar --filePath /builds/lixiaofang/weixin-java-tools --parseFrom 4 --cliMode portal --projectName lixaiofang --phase Phase_1 --onCache true --mergeMode FULL --retrunCheckReport true --token c291cmNlLWFwaUBzZWN6b25lLmNuOmNmYTcxYTUyNjFjZTQ3NmM5MGNhNDRjNmIyNGNiNGM3  --portalIp https://sca.gitsec.cn/
     #需要修改的值，token如果失效需要找管理员申请，portalIp为工具地址（该字段不用修改），filePath检测的文件目录，在k8s中为/builds/gitlab用户名/项目名称（例如“/builds/admin/MCMS”）projectName，项目名称修改成你想要的防止重复导致失败
     - ls;pwd
   artifacts:
