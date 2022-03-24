@@ -1,0 +1,22 @@
+stages:
+  - source
+#定义管道中的阶段
+source:
+  stage: source
+  image: "repo.gitsec.cn/docker/sca_scanner:latest"
+  #选择使用那个镜像
+  tags:
+    - k8s
+  script:
+    -  java -jar /opt/seczone/scanner.jar --filePath /builds/lixiaofang/Weixin Java Tools --parseFrom 4 --cliMode portal --projectName lixaiofang --phase Phase_1 --onCache true --mergeMode FULL --retrunCheckReport true --token c291cmNlLWFwaUBzZWN6b25lLmNuOmNmYTcxYTUyNjFjZTQ3NmM5MGNhNDRjNmIyNGNiNGM3  --portalIp https://sca.gitsec.cn/
+    #需要修改的值，token如果失效需要找管理员申请，portalIp为工具地址（该字段不用修改），filePath检测的文件目录，在k8s中为/builds/gitlab用户名/项目名称（例如“/builds/admin/MCMS”）projectName，项目名称修改成你想要的防止重复导致失败
+    - ls;pwd
+  artifacts:
+    reports: 
+      dependency_scanning: vulReport.json
+      license_scanning: licenseReport.json
+    paths:
+      - licenseReport.json
+      - vulReport.json
+#读取检测结果不用修改
+    expire_in: 3 day
