@@ -132,13 +132,13 @@
       <dependency>
         <groupId>org.jodd</groupId>
         <artifactId>jodd-http</artifactId>
-        <version>5.2.0</version>
+        <version>6.2.1</version>
         <scope>provided</scope>
       </dependency>
       <dependency>
         <groupId>com.squareup.okhttp3</groupId>
         <artifactId>okhttp</artifactId>
-        <version>4.5.0</version>
+        <version>4.10.0</version>
         <scope>provided</scope>
       </dependency>
 
@@ -274,7 +274,7 @@
       <dependency>
         <groupId>org.redisson</groupId>
         <artifactId>redisson</artifactId>
-        <version>3.12.0</version>
+        <version>3.17.7</version>
         <optional>true</optional>
         <scope>provided</scope>
         <exclusions>
@@ -308,7 +308,7 @@
       <dependency>
         <groupId>org.bouncycastle</groupId>
         <artifactId>bcpkix-jdk15on</artifactId>
-        <version>1.68</version>
+        <version>1.69</version>
       </dependency>
     </dependencies>
   </dependencyManagement>
