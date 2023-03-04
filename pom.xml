@@ -190,7 +190,7 @@
       <dependency>
         <groupId>com.fasterxml.jackson.dataformat</groupId>
         <artifactId>jackson-dataformat-xml</artifactId>
-        <version>2.13.0</version>
+        <version>2.13.5</version>
       </dependency>
 
       <!-- 测试所用依赖 -->
